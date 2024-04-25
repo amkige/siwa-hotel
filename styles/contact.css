@@ -1,0 +1,38 @@
+main {
+  .cards {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    article {
+      display: flex;
+
+      .body {
+        background-color: #f8f2da;
+        padding: 2rem;
+
+        p {
+          text-align: start;
+        }
+      }
+    }
+  }
+
+  .send-message {
+    form {
+      textarea {
+        width: 100%;
+        padding: 1rem 0.75rem;
+        margin-top: 0.5rem;
+
+        border: none;
+        background-color: #f8f2da;
+      }
+
+      input[type="submit"] {
+        margin-top: 1rem;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+main {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 120px - 16px);
+    gap: 4rem;
+
+    .images {
+      width: calc(100% + 150px);
+      min-height: 0;
+      height: 100%;
+      margin-left: -75px;
+      display: flex;
+      gap: 0.15rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      img:first-child {
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      img:last-child {
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 4rem;
+
+      h1 {
+        letter-spacing: 0.5rem;
+        font-size: 3rem;
+      }
+
+      img {
+        margin: auto;
+      }
+    }
+  }
+
+  .vision-mission {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    article {
+      /* background-color: #f5dbab; */
+      width: calc(100% - 200px - 4 * 16px);
+      line-height: 1.8;
+
+      display: flex;
+      gap: 4rem;
+
+      font-size: 1.25rem;
+    }
+
+    article:nth-child(even) {
+      align-self: flex-end;
+
+      img {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}

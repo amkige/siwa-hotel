@@ -1,0 +1,20 @@
+main {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    article {
+      display: flex;
+
+      .body {
+        background-color: #f8f2da;
+        padding: 2rem;
+
+        p {
+          text-align: start;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+main {
+  .split {
+    display: flex;
+    justify-content: space-between;
+
+    .announcements-news-events {
+      ul {
+        li + li {
+          margin-top: 2rem;
+        }
+      }
+      width: 50%;
+    }
+
+    .offers {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+
+  .faq ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    p {
+      margin-top: 0.5rem;
+    }
+  }
+}

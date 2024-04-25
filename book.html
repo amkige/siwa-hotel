@@ -1,0 +1,132 @@
+<!-- 
+  4. Third interior webpage:
+    This page will allow customers to book a room in the hotel by filling out the
+    online form, the booking form should contain the following data:
+    4.1. Customer name.
+    4.2. Check-in date.
+    4.3. Check-out date.
+    4.4. Number of people.
+    4.5. Contact number.
+    4.6. E-mail.
+    4.7. Comment.
+    4.8. Submit button.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/logo/logo.svg" type="image/svg" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/book.css" />
+    <title>Siwa Oasis Hotel & Resort</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="items">
+          <a href="/services.html">Accommodations</a>
+          <a href="/updates-offers.html">Updates & Offers</a>
+        </div>
+
+        <a href="/" class="logo">
+          <img
+            height="80"
+            src="assets/logo/logo-with-text.svg"
+            alt="Siwa Oasis Hotel & Resort"
+          />
+        </a>
+
+        <div class="items">
+          <a href="/contact.html">Contact Us</a>
+          <a class="cta" href="/book.html">Book Your Stay</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div id="sent-alert" class="alert" hidden>
+        <p>Your request has been successfully sent!</p>
+      </div>
+      <form action="/api/book.php" method="post">
+        <fieldset>
+          <!-- 4.1. Customer name. -->
+          <label for="customer_name">
+            Name
+            <input
+              name="customer_name"
+              type="text"
+              placeholder="Type your name"
+              required
+            />
+          </label>
+
+          <!-- 4.2. Check-in date. -->
+          <label for="number_of_people">
+            Number of People
+            <input
+              name="number_of_people"
+              type="number"
+              placeholder="Type number of people"
+              required
+            />
+          </label>
+
+          <!-- 4.3. Check-out date. -->
+          <label for="checkin_date">
+            Check-in Date
+            <input name="checkin_date" type="date" required />
+          </label>
+
+          <!-- 4.4. Number of people. -->
+          <label for="checkout_date">
+            Check-out Date
+            <input name="checkout_date" type="date" required />
+          </label>
+
+          <!-- 4.5. Contact number. -->
+          <label for="conctact_number">
+            Contact Number
+            <input
+              name="conctact_number"
+              type="text"
+              placeholder="Type your phone number"
+              required
+            />
+          </label>
+
+          <!-- 4.6. E-mail. -->
+          <label for="email">
+            E-Mail
+            <input
+              name="email"
+              type="email"
+              placeholder="Type your E-Mail"
+              required
+            />
+          </label>
+
+          <!-- 4.7. Comment. -->
+          <label for="comment">
+            Comment (optional)
+            <textarea
+              name="comment"
+              placeholder="Have a question or special request? Let us know how we can make your stay unforgettable!"
+              rows="5"
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <!-- 4.8. Submit button. -->
+        <input class="cta" type="submit" value="Send" />
+      </form>
+    </main>
+
+    <script>
+      if (new URLSearchParams(window.location.search).has("sent")) {
+        document.getElementById("sent-alert").hidden = false;
+      }
+    </script>
+  </body>
+</html>

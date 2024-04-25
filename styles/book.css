@@ -1,0 +1,25 @@
+main {
+  form {
+    fieldset {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      border: none;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 1rem 0.75rem;
+        margin-top: 0.5rem;
+
+        border: none;
+        background-color: #f8f2da;
+      }
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+}
