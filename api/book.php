@@ -28,7 +28,7 @@ $statement->bind_param(
 );
 
 if ($statement->execute() === TRUE) {
-  header("Location: /book.html?sent=1");
+  header("Location: book.html?sent=1");
   die();
 } else {
   echo "Error: " . $statement->error;

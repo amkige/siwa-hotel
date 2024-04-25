@@ -13,7 +13,7 @@ $statement = $conn->prepare("INSERT INTO messages VALUES (NULL, ?)");
 $statement->bind_param("s", $message);
 
 if ($statement->execute() === TRUE) {
-  header("Location: /contact.html?sent=1");
+  header("Location: contact.html?sent=1");
   die();
 } else {
   echo "Error: " . $statement->error;
